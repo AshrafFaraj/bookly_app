@@ -1,5 +1,5 @@
-import 'package:bookly_app/features/home/presentation/view/widgets/home_appbar.dart';
 import 'package:flutter/material.dart';
+import 'widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -7,9 +7,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [HomeAppBar()],
-      ),
+      body: HomeViewBody(),
     );
   }
 }

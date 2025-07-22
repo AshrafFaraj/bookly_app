@@ -12,14 +12,6 @@ class Assets {
 
   static const String close = "assets/images/close.svg";
 
-  static const String harrypotter1 = "assets/images/harrypotter1.svg";
-
-  static const String harrypotter2 = "assets/images/harrypotter2.svg";
-
-  static const String harrypotter3 = "assets/images/harrypotter3.svg";
-
-  static const String harrypotter4 = "assets/images/harrypotter4.svg";
-
   static const String harrypotter5 = "assets/images/harrypotter5.svg";
 
   static const String harrypotter6 = "assets/images/harrypotter6.svg";
@@ -39,4 +31,12 @@ class Assets {
   static const String star = "assets/images/Star.svg";
 
   static const String tigerCover = "assets/images/tigerCover.svg";
+
+  static const String harrypotter1 = "assets/images/harrypotter1.png";
+  static const String harrypotter2 = "assets/images/harrypotter2.png";
+  static const String harrypotter3 = "assets/images/harrypotter3.png";
+  static const String harrypotter4 = "assets/images/batman.png";
+  static const String tiger = "assets/images/tiger.png";
+  static const String gorilla = "assets/images/gorilla.png";
+  static const String jungle = "assets/images/jungle.png";
 }
