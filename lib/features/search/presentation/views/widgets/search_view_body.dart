@@ -63,6 +63,6 @@ class CustomSearchResultListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: 30, itemBuilder: (context, index) => BooksListItem());
+        itemCount: 30, itemBuilder: (context, index) => const BooksListItem());
   }
 }

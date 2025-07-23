@@ -44,7 +44,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       // );
 
       // ignore: use_build_context_synchronously
-      GoRouter.of(context).push('/home');
+      GoRouter.of(context).pushReplacement('/home');
     });
   }
 

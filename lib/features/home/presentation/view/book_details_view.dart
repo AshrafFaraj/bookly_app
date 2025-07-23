@@ -25,10 +25,8 @@ class BookDetailsView extends StatelessWidget {
                     EdgeInsets.only(top: 40, bottom: 30, left: 30, right: 30),
               ),
               BookDetailsSection(),
-              Expanded(
-                child: const SizedBox(
-                  height: 20,
-                ),
+              const SizedBox(
+                height: 20,
               ),
               BooksOverturesSection()
             ],

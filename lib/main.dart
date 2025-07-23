@@ -25,8 +25,8 @@ class Bookly extends StatelessWidget {
 }
 
 final _router = GoRouter(routes: [
-  // GoRoute(path: '/', builder: (context, state) => SplashView()),
-  GoRoute(path: '/', builder: (context, state) => SearchView()),
+  GoRoute(path: '/', builder: (context, state) => SplashView()),
+  // GoRoute(path: '/', builder: (context, state) => SearchView()),
   GoRoute(path: '/home', builder: (context, state) => HomeView()),
   GoRoute(path: '/bookDetails', builder: (context, state) => BookDetailsView()),
   GoRoute(path: '/searchView', builder: (context, state) => SearchView()),
