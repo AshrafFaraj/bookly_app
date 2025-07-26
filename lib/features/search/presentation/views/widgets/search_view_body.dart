@@ -1,9 +1,9 @@
 import 'package:bookly_app/core/assets.dart';
-import 'package:bookly_app/features/home/presentation/view/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/styles.dart';
+import '../../../../home/presentation/view/widgets/newset_books_listview_item.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -63,6 +63,8 @@ class CustomSearchResultListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: 30, itemBuilder: (context, index) => const BooksListItem());
+        itemCount: 30,
+        // itemBuilder: (context, index) => const NewsetBooksListItem());
+        itemBuilder: (context, index) => const Text("not found"));
   }
 }

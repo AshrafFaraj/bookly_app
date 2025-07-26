@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import 'home_view_body.dart';
+import 'featured_book_list_view_item.dart';
 
 class BooksOverturesSection extends StatelessWidget {
   const BooksOverturesSection({super.key});
@@ -28,7 +28,12 @@ class BooksOverturesSection extends StatelessWidget {
               itemCount: 6,
               itemBuilder: (context, index) => Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5),
-                    child: FeatureBookCover(borderRadius: 7),
+                    child: FeaturedBookCover(
+                      aspectRatio: 150 / 224,
+                      borderRadius: 7,
+                      imageUrl:
+                          'http://books.google.com/books/content?id=1sIzdipoXuQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                    ),
                   )),
         ),
       ],

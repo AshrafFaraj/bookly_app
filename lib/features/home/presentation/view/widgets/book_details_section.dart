@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
 import 'action_button.dart';
-import 'home_view_body.dart';
+import 'featured_book_list_view_item.dart';
+import 'rate_widget.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key});
@@ -13,8 +14,11 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         SizedBox(
             width: MediaQuery.sizeOf(context).width * 0.4,
-            child: FeatureBookCover(
+            child: FeaturedBookCover(
+              aspectRatio: 150 / 224,
               borderRadius: 20,
+              imageUrl:
+                  'http://books.google.com/books/content?id=1sIzdipoXuQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
             )),
         SizedBox(
           height: 40,
