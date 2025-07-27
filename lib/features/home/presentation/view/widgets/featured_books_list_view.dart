@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import '/features/home/presentation/view/widgets/err_massage.dart';
@@ -27,11 +28,17 @@ class FeaturedBooksListView extends StatelessWidget {
                 itemCount: state.books.length,
                 itemBuilder: (context, index) => Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: FeaturedBookCover(
-                        aspectRatio: 150 / 224,
-                        borderRadius: 14,
-                        imageUrl: state
-                            .books[index].volumeInfo!.imageLinks!.thumbnail!,
+                      child: GestureDetector(
+                        onTap: () {
+                          GoRouter.of(context)
+                              .push('/bookDetails', extra: state.books[index]);
+                        },
+                        child: FeaturedBookCover(
+                          aspectRatio: 150 / 224,
+                          borderRadius: 14,
+                          imageUrl: state
+                              .books[index].volumeInfo!.imageLinks!.thumbnail!,
+                        ),
                       ),
                     )),
           );

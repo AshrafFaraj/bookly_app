@@ -23,12 +23,9 @@ class FeaturedBookCover extends StatelessWidget {
               fit: BoxFit.fill,
               imageUrl: imageUrl,
               progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 70),
-                child:
-                    CircularProgressIndicator(value: downloadProgress.progress),
-              ),
+                  Center(
+                      child: CircularProgressIndicator(
+                          value: downloadProgress.progress)),
               errorWidget: (context, url, error) => Icon(Icons.error),
             )));
   }

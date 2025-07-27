@@ -3,7 +3,7 @@ import 'package:bookly_app/features/home/presentation/manager/newset_books_cubit
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'newset_books_listview_item.dart';
+import 'newset_books_list_view_item.dart';
 
 class NewsetBooksListView extends StatelessWidget {
   const NewsetBooksListView({
