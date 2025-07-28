@@ -1,8 +1,7 @@
-import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import '/core/utils/styles.dart';
+import '/features/home/data/models/book_model/book_model.dart';
 import 'featured_book_list_view_item.dart';
 import 'rate_widget.dart';
 
@@ -26,7 +25,8 @@ class NewsetBooksListItem extends StatelessWidget {
             children: [
               FeaturedBookCover(
                 aspectRatio: 70 / 105,
-                imageUrl: bookModel.volumeInfo!.imageLinks!.thumbnail!,
+                imageUrl: bookModel.volumeInfo!.imageLinks?.thumbnail! ??
+                    'https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png',
                 borderRadius: 0,
               ),
               const SizedBox(
@@ -45,9 +45,13 @@ class NewsetBooksListItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  Text(
-                    bookModel.volumeInfo!.authors![0],
-                    style: AppStyles.textStyleMedium14,
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.5,
+                    child: Text(
+                      bookModel.volumeInfo!.authors?[0] ?? '',
+                      style: AppStyles.textStyleMedium14,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   SizedBox(
                     width: MediaQuery.sizeOf(context).width * .55,

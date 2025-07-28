@@ -19,8 +19,10 @@ class CustomSearchResultListView extends StatelessWidget {
                 NewsetBooksListItem(bookModel: state.books[index]));
       } else if (state is SearchBooksFailure) {
         return ErrorWidget(state.errMessage);
-      } else {
+      } else if (state is SearchBooksLoading) {
         return CustomLoadingIndicator();
+      } else {
+        return SizedBox();
       }
     });
   }

@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '/core/widgets/custom_loading_indicator.dart';
 import '/features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
 import 'featured_book_list_view_item.dart';
@@ -22,11 +24,17 @@ class SimilarBooksListView extends StatelessWidget {
                 itemCount: state.books.length,
                 itemBuilder: (context, index) => Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5),
-                      child: FeaturedBookCover(
-                        aspectRatio: 150 / 224,
-                        borderRadius: 7,
-                        imageUrl: state
-                            .books[index].volumeInfo!.imageLinks!.thumbnail!,
+                      child: GestureDetector(
+                        onTap: () {
+                          GoRouter.of(context)
+                              .push('/bookDetails', extra: state.books[index]);
+                        },
+                        child: FeaturedBookCover(
+                          aspectRatio: 150 / 224,
+                          borderRadius: 7,
+                          imageUrl: state
+                              .books[index].volumeInfo!.imageLinks!.thumbnail!,
+                        ),
                       ),
                     )),
           );

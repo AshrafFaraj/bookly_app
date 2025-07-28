@@ -7,7 +7,7 @@ import '../../../data/repo/search_repo.dart';
 part 'search_books_state.dart';
 
 class SearchBooksCubit extends Cubit<SearchBooksState> {
-  SearchBooksCubit(this.searchRepo) : super(SearchBooksLoading());
+  SearchBooksCubit(this.searchRepo) : super(SearchBooksInitial());
   SearchRepo searchRepo;
 
   Future<void> searchBooks({required String searchTitle}) async {

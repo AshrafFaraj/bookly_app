@@ -31,7 +31,7 @@ class ActionButton extends StatelessWidget {
             child: CustomTextButton(
               onPressed: () async {
                 Uri uri = Uri.parse(bookModel.volumeInfo!.previewLink!);
-                if (!await canLaunchUrl(uri)) {
+                if (await canLaunchUrl(uri)) {
                   await launchUrl(uri);
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
